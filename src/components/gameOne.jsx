@@ -79,7 +79,7 @@ export default function GameOne() {
       {distance >= 48 && (
         <img
           className="absolute top-80 left-64 2xl:top-96 2xl:left-80"
-          src="/heart-image2.gif"
+          src="/Heart-image2.gif"
           width="15%"
           alt="heart"
         />
