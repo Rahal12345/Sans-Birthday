@@ -1,9 +1,19 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import Confetti from "./confetti";
 
 export default function Home() {
   const navigate = useNavigate();
+  const backaudio = new Audio("/homebackground.mp3");
+
+  useEffect(() => {
+    backaudio.play();
+  }, []);
+  useEffect(() => {
+    return () => {
+      backaudio.pause();
+    };
+  }, []);
   return (
     <div className="">
       <Confetti />
@@ -34,15 +44,15 @@ export default function Home() {
         style={{ top: "70%", right: 100 }}
         onClick={() => navigate("/game1")}
       >
-        Game One
+        San Game
       </button>
-      <button
+      {/* <button
         className="absolute transform hover:scale-110 bg-yellow-200 hover:bg-yellow-400 text-black font-semibold text-3xl rounded-xl  p-2 px-4 border-2 border-black"
         style={{ top: "83%", right: 100 }}
         onClick={() => navigate("/game2")}
       >
         Game Two
-      </button>
+      </button> */}
     </div>
   );
 }
