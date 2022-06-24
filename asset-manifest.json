@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Sans-Birthday/static/css/main.b551fcab.css",
+    "main.js": "/Sans-Birthday/static/js/main.8915fef6.js",
+    "static/js/787.ebabd9d9.chunk.js": "/Sans-Birthday/static/js/787.ebabd9d9.chunk.js",
+    "index.html": "/Sans-Birthday/index.html",
+    "main.b551fcab.css.map": "/Sans-Birthday/static/css/main.b551fcab.css.map",
+    "main.8915fef6.js.map": "/Sans-Birthday/static/js/main.8915fef6.js.map",
+    "787.ebabd9d9.chunk.js.map": "/Sans-Birthday/static/js/787.ebabd9d9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b551fcab.css",
+    "static/js/main.8915fef6.js"
+  ]
+}
