@@ -42,7 +42,7 @@ export default function GameOne() {
   }, []);
 
   useEffect(() => {
-    if (distance >= 48 || distance < -25) {
+    if (distance >= 49 || distance < -25) {
       setPaused(true);
       clearInterval(id);
       setShowModal(true);
@@ -52,48 +52,63 @@ export default function GameOne() {
 
   return (
     <div>
-      {distance >= 48 && <Confetti />}
+      {distance >= 49 && <Confetti />}
       <img src="2.jpg" width="100%" />
       <img
-        className="absolute top-0 left-0 2xl:left-7 2xl:top-6 w-96 2xl:w-auto"
+        className="absolute"
+        style={{ height: "45vw", top: "2vw", left: "1vw" }}
         src="/rahal.png"
         alt="rahal"
       />
       <img
-        className="absolute bottom-0 left-0 w-48 2xl:w-auto"
+        className="absolute"
+        style={{ height: "5vw", top: "44vw", left: "2vw" }}
         src="/rahalname.png"
         alt="rahalname"
       />
       <img
-        className={`absolute top-4 w-96 2xl:w-auto`}
-        style={{ right: `${distance}%` }}
+        className={`absolute`}
+        style={{ right: `${distance}%`, top: "3vw", height: "42vw" }}
         src="/san.png"
         alt="san"
       />
       <img
-        className={`absolute bottom-0 w-48 2xl:w-auto`}
-        style={{ right: `${distance + 5}%` }}
+        className={`absolute`}
+        style={{ right: `${distance + 5}%`, top: "44vw", height: "5vw" }}
         src="/sanname.png"
         alt="sanname"
       />
-      {distance >= 48 && (
+      {distance >= 49 && (
         <img
-          className="absolute top-80 left-64 2xl:top-96 2xl:left-80"
+          className="absolute"
+          style={{ top: "22vw", left: "19vw" }}
           src="/Heart-image2.gif"
           width="15%"
           alt="heart"
         />
       )}
       <button
-        className="absolute transform hover:scale-110 bg-yellow-200 hover:bg-yellow-400 text-black font-semibold text-3xl rounded-xl  p-1 border-2 border-black"
-        style={{ top: "3%", left: 5 }}
+        className="absolute transform hover:scale-110 bg-yellow-200 hover:bg-yellow-400 text-black font-semibold rounded-xl border-black"
+        style={{
+          top: "1vw",
+          left: "1vw",
+          "font-size": "3vw",
+          padding: "0.2vw",
+          borderWidth: "0.2vw",
+        }}
         onClick={() => navigate("/")}
       >
         <IoArrowBackCircleSharp />
       </button>
       <button
-        className="absolute transform hover:scale-110 bg-yellow-200 hover:bg-yellow-400 text-black font-semibold text-3xl rounded-xl  p-1 border-2 border-black"
-        style={{ top: "3%", left: 50 }}
+        className="absolute transform hover:scale-110 bg-yellow-200 hover:bg-yellow-400 text-black font-semibold rounded-xl border-black"
+        style={{
+          top: "1vw",
+          left: "6vw",
+          "font-size": "3vw",
+          padding: "0.2vw",
+          borderWidth: "0.2vw",
+        }}
         onClick={() => {
           setDistance(0);
           setPaused(true);
@@ -106,22 +121,34 @@ export default function GameOne() {
       <button
         className={`absolute transform ${!paused && "hover:scale-110"} ${
           distance % 2 === 0 ? "bg-yellow-200" : "bg-yellow-400"
-        } text-black font-semibold text-3xl rounded-xl  p-2 px-4 border-2 border-black`}
-        style={{ top: "3%", right: 50 }}
+        } text-black font-semibold rounded-xl border-black`}
+        style={{
+          top: "1vw",
+          right: "1vw",
+          "font-size": "2.5vw",
+          borderWidth: "0.2vw",
+          width: "13vw",
+        }}
         onClick={() => {
           setDistance((prev) => prev + increment);
           clkaudio.play();
         }}
         disabled={paused}
       >
-        Love you
+        Love You
       </button>
-      {distance < 48 && distance > -25 && (
+      {distance < 49 && distance >= -25 && (
         <button
           className={`absolute transform hover:scale-110 ${
             paused ? "bg-yellow-200" : "bg-yellow-400"
-          } text-black font-semibold text-3xl rounded-xl  p-2 px-4 border-2 border-black`}
-          style={{ bottom: "3%", right: 50 }}
+          } text-black font-semibold rounded-xl border-black`}
+          style={{
+            top: "40vw",
+            right: "1vw",
+            "font-size": "2.5vw",
+            borderWidth: "0.2vw",
+            padding: "0.7vw",
+          }}
           onClick={() => {
             Timer();
             setPaused(!paused);

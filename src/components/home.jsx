@@ -8,12 +8,12 @@ export default function Home() {
 
   useEffect(() => {
     backaudio.play();
-  }, []);
+  }, [backaudio]);
   useEffect(() => {
     return () => {
       backaudio.pause();
     };
-  }, []);
+  }, [backaudio]);
   return (
     <div className="">
       <Confetti />
@@ -23,25 +23,32 @@ export default function Home() {
         width="100%"
         alt="backgroundimage"
       />
-      <div className=" bg-black opacity-50 h-16 lg:h-16 2xl:h-28 relative "></div>
-      <div className="absolute top-0 pt-2 pb-6 text-white fontPotta left-12 lg:left-36 2xl:left-60 text-4xl lg:text-5xl 2xl:text-6xl ">
+      <div
+        className="relative bg-black opacity-50"
+        style={{ height: "8vw" }}
+      ></div>
+      <div
+        className="absolute text-white fontPotta top-0  left-12 lg:left-36 2xl:left-60"
+        style={{ "font-size": "4vw" }}
+      >
         😘🥳🥳Happy Birth Day San🎂🎂😘
       </div>
       <img
-        className="absolute top-24"
+        className="absolute"
         src="/1.png"
         width="40%"
         alt="backgroundimage"
       />
       <img
-        className="absolute top-24 right-4"
+        className="absolute"
+        style={{ top: "9vw", right: "3vw" }}
         src="/11.jpg"
         width="24%"
         alt="backgroundimage"
       />
       <button
-        className="absolute transform hover:scale-110 bg-yellow-200 hover:bg-yellow-400 text-black font-semibold text-3xl rounded-xl  p-2 px-4 border-2 border-black"
-        style={{ top: "70%", right: 100 }}
+        className="absolute transform hover:scale-110 bg-yellow-200 hover:bg-yellow-400 text-black font-semibold rounded-xl  p-2 px-4 border-2 border-black"
+        style={{ top: "40vw", right: "3vw", width: "20%", "font-size": "2vw" }}
         onClick={() => navigate("/game1")}
       >
         San Game
