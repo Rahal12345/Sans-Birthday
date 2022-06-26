@@ -8,14 +8,14 @@ export default function Home() {
 
   useEffect(() => {
     backaudio.play();
-  }, [backaudio]);
+  }, []);
   useEffect(() => {
     return () => {
       backaudio.pause();
     };
-  }, [backaudio]);
+  }, []);
   return (
-    <div className="">
+    <div>
       <Confetti />
       <img
         className="absolute top-0"

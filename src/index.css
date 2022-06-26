@@ -1,6 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+/* Disable scrollbar Chrome */
+::-webkit-scrollbar {
+  display: none;
+} 
+/* Disable scrollbar Firefox */
+html {
+  scrollbar-width: none;
+}
 
 body {
   margin: 0;
@@ -9,7 +17,6 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow: hidden;
 }
 
 code {

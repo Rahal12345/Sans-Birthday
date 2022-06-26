@@ -62,7 +62,7 @@ export default function GameOne() {
       />
       <img
         className="absolute"
-        style={{ height: "5vw", top: "44vw", left: "2vw" }}
+        style={{ height: "4vw", top: "42vw", left: "2vw" }}
         src="/rahalname.png"
         alt="rahalname"
       />
@@ -74,7 +74,7 @@ export default function GameOne() {
       />
       <img
         className={`absolute`}
-        style={{ right: `${distance + 5}%`, top: "44vw", height: "5vw" }}
+        style={{ right: `${distance + 5}%`, top: "42vw", height: "4vw" }}
         src="/sanname.png"
         alt="sanname"
       />
