@@ -88,7 +88,7 @@ export default function GameOne() {
         />
       )}
       <button
-        className="absolute transform hover:scale-110 bg-yellow-200 hover:bg-yellow-400 text-black font-semibold rounded-xl border-black"
+        className="absolute transition duration-400 transform hover:scale-110 bg-yellow-200 hover:bg-yellow-400 text-black font-semibold rounded-xl border-black"
         style={{
           top: "1vw",
           left: "1vw",
@@ -101,7 +101,7 @@ export default function GameOne() {
         <IoArrowBackCircleSharp />
       </button>
       <button
-        className="absolute transform hover:scale-110 bg-yellow-200 hover:bg-yellow-400 text-black font-semibold rounded-xl border-black"
+        className="absolute transition duration-400 transform hover:scale-110 bg-yellow-200 hover:bg-yellow-400 text-black font-semibold rounded-xl border-black"
         style={{
           top: "1vw",
           left: "6vw",
@@ -119,7 +119,7 @@ export default function GameOne() {
         <ImLoop2 />
       </button>
       <button
-        className={`absolute transform ${!paused && "hover:scale-110"} ${
+        className={`absolute transition duration-400 transform ${!paused && "hover:scale-110"} ${
           distance % 2 === 0 ? "bg-yellow-200" : "bg-yellow-400"
         } text-black font-semibold rounded-xl border-black`}
         style={{
@@ -139,7 +139,7 @@ export default function GameOne() {
       </button>
       {distance < 49 && distance >= -25 && (
         <button
-          className={`absolute transform hover:scale-110 ${
+          className={`absolute transition duration-400 transform hover:scale-110 ${
             paused ? "bg-yellow-200" : "bg-yellow-400"
           } text-black font-semibold rounded-xl border-black`}
           style={{

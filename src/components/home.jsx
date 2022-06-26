@@ -47,19 +47,33 @@ export default function Home() {
         alt="backgroundimage"
       />
       <button
-        className="absolute transform hover:scale-110 bg-yellow-200 hover:bg-yellow-400 text-black font-semibold rounded-xl  p-2 px-4 border-2 border-black"
-        style={{ top: "40vw", right: "3vw", width: "20%", "font-size": "2vw" }}
+        className="absolute transition duration-400 transform hover:scale-110 bg-yellow-200 hover:bg-yellow-400 text-black font-semibold rounded-xl border-black"
+        style={{
+          top: "35vw",
+          right: "3vw",
+          width: "20%",
+          "font-size": "2vw",
+          borderWidth: "0.2vw",
+          padding: "1vw",
+        }}
         onClick={() => navigate("/game1")}
       >
         San Game
       </button>
-      {/* <button
-        className="absolute transform hover:scale-110 bg-yellow-200 hover:bg-yellow-400 text-black font-semibold text-3xl rounded-xl  p-2 px-4 border-2 border-black"
-        style={{ top: "83%", right: 100 }}
+      <button
+        className="absolute transition duration-400 transform hover:scale-110 bg-yellow-200 hover:bg-yellow-400 text-black font-semibold rounded-xl border-black"
+        style={{
+          top: "41vw",
+          right: "3vw",
+          width: "20%",
+          "font-size": "2vw",
+          borderWidth: "0.2vw",
+          padding: "1vw",
+        }}
         onClick={() => navigate("/game2")}
       >
-        Game Two
-      </button> */}
+        San Game 2
+      </button>
     </div>
   );
 }
