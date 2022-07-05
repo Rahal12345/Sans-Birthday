@@ -32,7 +32,7 @@ export default function GameOne() {
     }
   };
   useEffect(() => {
-    backaudio.play();
+    setTimeout(() => backaudio.play(), 500);
   }, []);
 
   useEffect(() => {
@@ -119,7 +119,9 @@ export default function GameOne() {
         <ImLoop2 />
       </button>
       <button
-        className={`absolute transition duration-400 transform ${!paused && "hover:scale-110"} ${
+        className={`absolute transition duration-400 transform ${
+          !paused && "hover:scale-110"
+        } ${
           distance % 2 === 0 ? "bg-yellow-200" : "bg-yellow-400"
         } text-black font-semibold rounded-xl border-black`}
         style={{
