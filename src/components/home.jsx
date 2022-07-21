@@ -7,7 +7,7 @@ export default function Home() {
   const backaudio = new Audio("/homebackground.mp3");
 
   useEffect(() => {
-    setTimeout(() => backaudio.play(), 500);
+    backaudio.play();
   }, []);
   useEffect(() => {
     return () => {

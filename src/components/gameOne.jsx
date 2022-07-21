@@ -32,7 +32,7 @@ export default function GameOne() {
     }
   };
   useEffect(() => {
-    setTimeout(() => backaudio.play(), 500);
+    backaudio.play();
   }, []);
 
   useEffect(() => {
@@ -53,7 +53,7 @@ export default function GameOne() {
   return (
     <div>
       {distance >= 49 && <Confetti />}
-      <img src="2.jpg" width="100%" />
+      <img src="game1background.jpg" width="100%" />
       <img
         className="absolute"
         style={{ height: "45vw", top: "2vw", left: "1vw" }}
@@ -119,9 +119,7 @@ export default function GameOne() {
         <ImLoop2 />
       </button>
       <button
-        className={`absolute transition duration-400 transform ${
-          !paused && "hover:scale-110"
-        } ${
+        className={`absolute transition duration-400 transform ${!paused && "hover:scale-110"} ${
           distance % 2 === 0 ? "bg-yellow-200" : "bg-yellow-400"
         } text-black font-semibold rounded-xl border-black`}
         style={{
